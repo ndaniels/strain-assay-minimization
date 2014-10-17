@@ -46,11 +46,11 @@ ghci interpreter.
 
 Simply put the following in (substitute your list of assay numbers):
 
-`:load Barcode
-samples <- parseBarcode "2013-test.csv"
-let samples' = uniquify $ V.toList $ V.filter validBarcode samples
-let ids = map (\x -> x - 1) [1, 9, 10, 11, 12, 14, 15, 18]
-putStrLn $ unlines $ reportDuplicates samples' ids`
+        :load Barcode
+        samples <- parseBarcode "2013-test.csv"
+        let samples' = uniquify $ V.toList $ V.filter validBarcode samples
+        let ids = map (\x -> x - 1) [1, 9, 10, 11, 12, 14, 15, 18]
+        putStrLn $ unlines $ reportDuplicates samples' ids
 
 Note that the (\x -> x - 1) is a lambda function that subtracts one from every
 index. This is because internally, indices are 0-indexed, but for input and
