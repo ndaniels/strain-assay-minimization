@@ -32,7 +32,7 @@ In the future, this will be parameterized.
 
 ###Assumptions
  - The barcodes are all biallelic, except for 'X' and 'N' entries
- - Duplicate samples (complete duplicates) are removed
+ - Duplicate samples (complete duplicates) will be ignored.
  - Assays are numbered starting from 1 (1-indexed) in both input and output.
  - Samples with >1 N, >5 X, or >5 (combined X and N) are removed.
    This assumption exists on line 53 of Barcode.hs, which reads
