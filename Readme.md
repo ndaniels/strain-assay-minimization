@@ -27,6 +27,7 @@ The input file *must* be a CSV (comma-separated value) file as follows:
 If different-length barcodes are needed, for now, change line 36 of Barcode.hs
 (the one that reads `| V.length v == 25 = Barcode <$>`)
 so the harcoded 25 is another number (1 more than the number of barcodes).
+Then, recompile.
 In the future, this will be parameterized.
 
 ###Assumptions
@@ -36,6 +37,7 @@ In the future, this will be parameterized.
  - Samples with >1 N, >5 X, or >5 (combined X and N) are removed.
    This assumption exists on line 53 of Barcode.hs, which reads
    `where check b = ns <= 1 && xs + ns <= 5`
+   If you need to change this, of course you will have to recompile.
    
 ###Analyzing existing assay sets
 If you wish to use an existing assay set in order to see if it uniquely
