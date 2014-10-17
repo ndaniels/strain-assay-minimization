@@ -3,15 +3,11 @@ This is a Haskell program for determining the minimal set of assays needed
 to distinguish all samples from a set of molecular barcode samples.
 
 ###Compilation
-You must have the GHC Haskell compiler installed.
-This will always be a requirement, but in the future I will write a cabal file.
+You must have the GHC Haskell compiler installed
 
  - Change directory to the directory containing the source code, and run:
 
-        cabal install hashmap
-        ghc --make -O3 Main.hs -o min-barcodes
- - if you'd like, copy the binary min-barcodes to someplace like 
-   `/usr/local/bin`.
+        cabal install
 
 
 ###Usage
@@ -47,7 +43,7 @@ identifies all samples in a data set, you must do this interactively in the
 ghci interpreter.
 
 From the command line in the source code directory, run:
-
+        ghc --make -O3 Main.hs -o min-barcodes
         ghci
 
 Simply put the following in (substitute your list of assay numbers):
