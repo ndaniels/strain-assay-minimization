@@ -7,7 +7,9 @@ You must have the GHC Haskell compiler installed.
 This will always be a requirement, but in the future I will write a cabal file.
 
  - Change directory to the directory containing the source code, and run:
-   `ghc --make -O3 Main.hs -o min-barcodes`
+
+        cabal install hashmap
+        ghc --make -O3 Main.hs -o min-barcodes
  - if you'd like, copy the binary min-barcodes to someplace like 
    `/usr/local/bin`.
 
@@ -43,6 +45,10 @@ In the future, this will be parameterized.
 If you wish to use an existing assay set in order to see if it uniquely
 identifies all samples in a data set, you must do this interactively in the
 ghci interpreter.
+
+From the command line in the source code directory, run:
+
+        ghci
 
 Simply put the following in (substitute your list of assay numbers):
 
