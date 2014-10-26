@@ -11,9 +11,10 @@ You must have the GHC Haskell compiler installed
 
 
 ###Usage
-There is one command-line argument: the sample file (see File Format below).
+There are two command-line arguments: the sample file (see File Format below),
+and the maximum number of assays to report.
 
-`./min-barcodes input.csv`
+`./min-barcodes input.csv 8`
 
 ###File format
 The input file *must* be a CSV (comma-separated value) file as follows:

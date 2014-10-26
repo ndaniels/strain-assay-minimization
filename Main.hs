@@ -9,10 +9,11 @@ import qualified Data.List as DL
 main :: IO ()
 main = do
   -- get input arg
-  [inFile] <- getArgs >>= return . take 1
+  [inFile, maxSnps'] <- getArgs >>= return . take 2
+  let maxSnps = read maxSnps' :: Int
   samples <- parseBarcode inFile
   let samples' = uniquify $ V.toList $ V.filter validBarcode samples
-  putStrLn $ show $ DL.sort $ map (+1) $ chooseSnps samples' [0..23]
+  putStrLn $ show $ DL.sort $ map (+1) $ take maxSnps $ chooseSnps samples' [0..23]
 
 
   
