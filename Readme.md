@@ -46,6 +46,7 @@ identifies all samples in a data set, you must do this interactively in the
 ghci interpreter.
 
 From the command line in the source code directory, run:
+
         ghc --make -O3 Main.hs -o min-barcodes
         ghci
 
