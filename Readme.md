@@ -27,7 +27,7 @@ The input file *must* be a CSV (comma-separated value) file as follows:
    
 If different-length barcodes are needed, for now, change line 36 of Barcode.hs
 (the one that reads `| V.length v == 25 = Barcode <$>`)
-so the harcoded 25 is another number (1 more than the number of barcodes).
+so the hardcoded 25 is another number (1 more than the number of assays).
 Then, recompile.
 In the future, this will be parameterized.
 
